@@ -1,0 +1,78 @@
+Last login: Mon Feb 21 13:54:30 on ttys001
+bruce@Shouyis-MBP ~ % dfx new mysite
+Fetching manifest https://sdk.dfinity.org/manifest.json
+You seem to be running an outdated version of dfx.
+
+You are strongly encouraged to upgrade by running 'dfx upgrade'!
+Creating new project "mysite"...
+CREATE       mysite/src/mysite_assets/assets/sample-asset.txt (24B)...
+CREATE       mysite/src/mysite/main.mo (107B)...
+CREATE       mysite/dfx.json (486B)...
+CREATE       mysite/.gitignore (165B)...
+CREATE       mysite/README.md (2.25KB)...
+CREATE       mysite/src/mysite_assets/src/index.js (529B)...
+CREATE       mysite/src/mysite_assets/src/index.html (626B)...
+CREATE       mysite/src/mysite_assets/assets/logo.png (24.80KB)...
+CREATE       mysite/src/mysite_assets/assets/main.css (537B)...
+CREATE       mysite/src/mysite_assets/assets/favicon.ico (15.04KB)...
+CREATE       mysite/package.json (1.12KB)...
+CREATE       mysite/webpack.config.js (3.52KB)...
+⠂ Installing node dependencies...
+
+added 418 packages, and audited 419 packages in 49s
+
+86 packages are looking for funding
+  run `npm fund` for details
+
+  Done.
+Creating git repository...
+
+===============================================================================
+        Welcome to the internet computer developer community!
+                        You're using dfx 0.8.4
+
+            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄                ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄       
+          ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄          ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄    
+        ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄      ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄  
+       ▄▄▄▄▄▄▄▄▄▄▀▀▀▀▀▄▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄▄▀▀▀▀▀▀▄▄▄▄▄▄▄▄▄▄ 
+      ▄▄▄▄▄▄▄▄▀         ▀▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▀         ▀▄▄▄▄▄▄▄▄▄
+     ▄▄▄▄▄▄▄▄▀            ▀▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▀             ▄▄▄▄▄▄▄▄
+     ▄▄▄▄▄▄▄▄               ▀▄▄▄▄▄▄▄▄▄▄▄▄▀                ▄▄▄▄▄▄▄
+     ▄▄▄▄▄▄▄▄                ▄▄▄▄▄▄▄▄▄▄▄▄                 ▄▄▄▄▄▄▄
+     ▄▄▄▄▄▄▄▄               ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄              ▄▄▄▄▄▄▄▄
+      ▄▄▄▄▄▄▄▄           ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄          ▄▄▄▄▄▄▄▄▀
+      ▀▄▄▄▄▄▄▄▄▄▄     ▄▄▄▄▄▄▄▄▄▄▄▄▀ ▀▄▄▄▄▄▄▄▄▄▄▄▄    ▄▄▄▄▄▄▄▄▄▄▄ 
+       ▀▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▀     ▀▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▀  
+         ▀▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▀         ▀▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄    
+           ▀▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▀▀             ▀▀▄▄▄▄▄▄▄▄▄▄▄▄▄▄▀      
+              ▀▀▀▀▀▀▀▀▀▀▀                    ▀▀▀▀▀▀▀▀▀▀▀         
+     
+
+
+To learn more before you start coding, see the documentation available online:
+
+- Quick Start: https://sdk.dfinity.org/docs/quickstart/quickstart-intro.html
+- SDK Developer Tools: https://sdk.dfinity.org/docs/developers-guide/sdk-guide.html
+- Motoko Language Guide: https://sdk.dfinity.org/docs/language-guide/motoko.html
+- Motoko Quick Reference: https://sdk.dfinity.org/docs/language-guide/language-manual.html
+
+If you want to work on programs right away, try the following commands to get started:
+
+    cd mysite
+    dfx help
+    dfx new --help
+
+===============================================================================
+
+bruce@Shouyis-MBP ~ % cd mysite
+bruce@Shouyis-MBP mysite % dfx start
+Starting webserver for /_/
+binding to: 127.0.0.1:59541
+Feb 21 13:19:58.677 INFO ic-starter. Configuration: ValidatedConfig { replica_path: Some("/Users/bruce/.cache/dfinity/versions/0.8.4/replica"), replica_version: "0.8.0", log_level: Warning, cargo_bin: "cargo", cargo_opts: "", state_dir: "/Users/bruce/mysite/.dfx/state/replicated_state", http_listen_addr: 127.0.0.1:0, http_port_file: Some("/Users/bruce/mysite/.dfx/replica-configuration/replica-1.port"), metrics_addr: None, provisional_whitelist: Some(All), artifact_pool_dir: "/Users/bruce/mysite/.dfx/state/replicated_state/node-100/ic_consensus_pool", crypto_root: "/Users/bruce/mysite/.dfx/state/replicated_state/node-100/crypto", state_manager_root: "/Users/bruce/mysite/.dfx/state/replicated_state/node-100/state", registry_local_store_path: "/Users/bruce/mysite/.dfx/state/replicated_state/ic_registry_local_store", unit_delay: None, initial_notary_delay: Some(600ms), detect_consensus_starvation: None, consensus_pool_backend: Some("rocksdb"), state_dir_holder: None }, Application: starter
+Feb 21 13:19:58.677 INFO Initialize replica configuration "/Users/bruce/mysite/.dfx/state/replicated_state/ic.json5", Application: starter
+Feb 21 13:19:59.697 INFO Executing "/Users/bruce/.cache/dfinity/versions/0.8.4/replica" "--replica-version" "0.8.0" "--config-file" "/Users/bruce/mysite/.dfx/state/replicated_state/ic.json5", Application: starter
+Feb 21 13:20:00.302 WARN s:e4k33-pk54m-h225e-cb23x-2ian7-oo5pq-clwn5-ibf5s-tgnyo-6zwca-nae/n:ecg37-qa4tk-sys7i-y2g5o-o3vky-r5ape-5jf5d-koktc-ili7v-xrdzx-cae/ic_p2p/download_management PeerManagerImpl::new(): relay_config = None
+version: 0.7.0
+ Feb 21 21:20:00.349 INFO Log Level: INFO
+ Feb 21 21:20:00.351 INFO Starting server. Listening on http://127.0.0.1:8000/
+˜

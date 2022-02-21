@@ -1,0 +1,100 @@
+Last login: Mon Feb 21 15:54:14 on ttys000
+bruce@Shouyis-MBP ~ % npm install
+npm ERR! code ENOENT
+npm ERR! syscall open
+npm ERR! path /Users/bruce/package.json
+npm ERR! errno -2
+npm ERR! enoent ENOENT: no such file or directory, open '/Users/bruce/package.json'
+npm ERR! enoent This is related to npm not being able to find a file.
+npm ERR! enoent 
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /Users/bruce/.npm/_logs/2022-02-21T13_20_38_557Z-debug-0.log
+bruce@Shouyis-MBP ~ % dfx deploy
+dfx.json not found, using default.
+Creating a wallet canister on the local network.
+The wallet canister on the "local" network for user "default" is "rwlgt-iiaaa-aaaaa-aaaaa-cai"
+Cannot find dfx configuration file in the current working directory. Did you forget to create one?
+bruce@Shouyis-MBP ~ % cd mysite
+bruce@Shouyis-MBP mysite % dfx deploy
+Creating a wallet canister on the local network.
+The wallet canister on the "local" network for user "default" is "rrkah-fqaaa-aaaaa-aaaaq-cai"
+Deploying all canisters.
+Creating canisters...
+Creating canister "mysite"...
+"mysite" canister created with canister id: "ryjl3-tyaaa-aaaaa-aaaba-cai"
+Creating canister "mysite_assets"...
+"mysite_assets" canister created with canister id: "r7inp-6aaaa-aaaaa-aaabq-cai"
+Building canisters...
+Building frontend...
+Installing canisters...
+Creating UI canister on the local network.
+The UI canister on the "local" network is "rkp4c-7iaaa-aaaaa-aaaca-cai"
+Installing code for canister mysite, with canister_id ryjl3-tyaaa-aaaaa-aaaba-cai
+Installing code for canister mysite_assets, with canister_id r7inp-6aaaa-aaaaa-aaabq-cai
+Authorizing our identity (default) to the asset canister...
+Uploading assets to asset canister...
+Starting batch.
+Staging contents of new and changed assets:
+  /favicon.ico 1/1 (15406 bytes)
+  /index.html 1/1 (664 bytes)
+  /index.html (gzip) 1/1 (381 bytes)
+  /index.js 1/1 (604263 bytes)
+  /index.js (gzip) 1/1 (144724 bytes)
+  /main.css 1/1 (537 bytes)
+  /main.css (gzip) 1/1 (297 bytes)
+  /sample-asset.txt 1/1 (24 bytes)
+  /logo.png 1/1 (25397 bytes)
+  /index.js.map 1/1 (653722 bytes)
+  /index.js.map (gzip) 1/1 (149005 bytes)
+Committing batch.
+Deployed canisters.
+bruce@Shouyis-MBP mysite % dfx canister call mysite greet benef1t
+("Hello, benef1t!")
+bruce@Shouyis-MBP mysite % npm start
+
+> mysite_assets@0.1.0 prestart
+> npm run copy:types
+
+
+> mysite_assets@0.1.0 copy:types
+> rsync -avr .dfx/$(echo ${DFX_NETWORK:-'**'})/canisters/** --exclude='assets/' --exclude='idl/' --exclude='*.wasm' --delete src/declarations
+
+building file list ... done
+mysite_assets/
+
+sent 320 bytes  received 26 bytes  692.00 bytes/sec
+total size is 19126  speedup is 55.28
+
+> mysite_assets@0.1.0 start
+> webpack serve --mode development --env development
+
+No production canister_ids.json found. Continuing with local
+<i> [webpack-dev-server] [HPM] Proxy created: /api  -> http://localhost:8000
+<i> [webpack-dev-server] [HPM] Proxy rewrite rule created: "^/api" ~> "/api"
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: http://localhost:8080/
+<i> [webpack-dev-server] On Your Network (IPv4): http://192.168.50.84:8080/
+<i> [webpack-dev-server] On Your Network (IPv6): http://[fe80::1]:8080/
+<i> [webpack-dev-server] Content not from webpack is served from '/Users/bruce/mysite/public' directory
+asset index.js 806 KiB [emitted] (name: index) 1 related asset
+asset logo.png 24.8 KiB [emitted] [from: src/mysite_assets/assets/logo.png] [copied]
+asset favicon.ico 15 KiB [emitted] [from: src/mysite_assets/assets/favicon.ico] [copied]
+asset index.html 664 bytes [emitted]
+asset main.css 537 bytes [emitted] [from: src/mysite_assets/assets/main.css] [copied]
+asset sample-asset.txt 24 bytes [emitted] [from: src/mysite_assets/assets/sample-asset.txt] [copied]
+runtime modules 27.1 KiB 13 modules
+modules by path ./node_modules/ 680 KiB
+  modules by path ./node_modules/@dfinity/ 209 KiB 34 modules
+  modules by path ./node_modules/webpack-dev-server/client/ 56.8 KiB 12 modules
+  modules by path ./node_modules/borc/ 113 KiB 10 modules
+  modules by path ./node_modules/webpack/hot/*.js 4.3 KiB 4 modules
+  modules by path ./node_modules/html-entities/lib/*.js 81.3 KiB 4 modules
+  modules by path ./node_modules/simple-cbor/src/*.js 17.5 KiB 3 modules
+  modules by path ./node_modules/iso-url/ 4.36 KiB 3 modules
+modules by path ./src/ 2.06 KiB
+  ./src/mysite_assets/src/index.js 529 bytes [built] [code generated]
+  ./src/declarations/mysite/index.js 1.38 KiB [built] [code generated]
+  ./src/declarations/mysite/mysite.did.js 167 bytes [built] [code generated]
+webpack 5.63.0 compiled successfully in 401 ms
+
